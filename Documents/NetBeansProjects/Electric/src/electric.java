@@ -174,6 +174,32 @@ public class electric extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(electric.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+       id = txtid.getText();
+       count = Integer.parseInt(txtunit.getText());
+       
+       if(count < 500)
+       {
+         charge = 1.00;
+       }
+      else if(count < 500 && count < 600)
+       {
+         charge = 1.80;
+       }
+       else if(count < 600 && count < 800)
+       {
+         charge = 2.80;
+       }
+       else
+       {
+           charge = 3.00;
+       }
+       
+       grandtotal = charge * count;
+       
+       print();
+    }                                        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
